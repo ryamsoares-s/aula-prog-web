@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Desafio 1 - Cartão de perfil</title>
+
+	<!--
+		Das três formas de aplicar CSS, aqui usamos a segunda:
+		a tag <style> dentro do <head>.
+
+		1) atributo style:  <h1 style="color: blue;">Nome</h1>
+		2) tag <style>:     é o que está abaixo
+		3) arquivo externo: <link rel="stylesheet" href="estilo.css" />
+	-->
+	<style>
+		/* A página inteira: cor de fundo, fonte e alinhamento do texto */
+		body {
+			background-color: #eef2f7;
+			color: #22303f;
+			font-family: Verdana, Geneva, sans-serif;
+			text-align: center;
+			padding: 40px 16px;
+		}
+
+		/* A caixa branca do cartão, centralizada com margin: auto */
+		.cartao {
+			background-color: #ffffff;
+			max-width: 360px;
+			margin: 0 auto;
+			padding: 32px 24px;
+			border-radius: 16px;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+		}
+
+		/* border-radius: 50% transforma o quadrado da foto em um círculo */
+		.foto {
+			width: 160px;
+			height: 160px;
+			object-fit: cover;
+			border-radius: 50%;
+			border: 4px solid #2f6fed;
+		}
+
+		h1 {
+			font-size: 26px;
+			margin: 20px 0 4px 0;
+		}
+
+		.cargo {
+			color: #2f6fed;
+			font-size: 14px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			margin: 0;
+		}
+
+		.frase {
+			color: #5a6b7d;
+			font-size: 16px;
+			line-height: 1.6;
+			margin: 20px 0 28px 0;
+		}
+
+		/* Os dois links viram "botões" com padding e cor de fundo */
+		.links a {
+			display: inline-block;
+			background-color: #2f6fed;
+			color: #ffffff;
+			text-decoration: none;
+			padding: 10px 20px;
+			margin: 4px;
+			border-radius: 8px;
+			font-size: 14px;
+		}
+
+		.links a:hover {
+			background-color: #1d4fbb;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="cartao">
+
+		<img class="foto" src="img/foto-perfil.jpeg" alt="Foto de perfil de Ryam Soares da Silva" />
+
+		<h1>Ryam Soares da Silva</h1>
+		<p class="cargo">Professor de Programação Web</p>
+
+		<p class="frase">
+			Ensinar a programar é ensinar a procurar a resposta certa
+			— e depois entender por que ela funciona.
+		</p>
+
+		<div class="links">
+			<a href="https://github.com/ryamsoares-s">GitHub</a>
+			<a href="https://www.linkedin.com/in/ryamsoares">LinkedIn</a>
+		</div>
+
+	</div>
+
+</body>
+</html>
