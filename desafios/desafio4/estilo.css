@@ -1,0 +1,69 @@
+/* ==========================================================
+   Desafio 4 - Galeria de fotos
+   Foco: display: flex, gap, justify-content e width
+   ========================================================== */
+
+body {
+	background-color: #14181d;
+	color: #e8edf2;
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 48px 24px;
+}
+
+h1 {
+	font-size: 32px;
+	text-align: center;
+	margin: 0 0 8px 0;
+}
+
+.subtitulo {
+	text-align: center;
+	color: #92a0ae;
+	margin: 0 0 40px 0;
+}
+
+/* O CONTÊINER DA GALERIA
+   display: flex        -> coloca os filhos (as <figure>) lado a lado
+   gap                  -> espaço uniforme ENTRE os itens
+   justify-content      -> como a sobra de espaço é distribuída na horizontal
+   flex-wrap: wrap      -> se não couber, os itens pulam para a linha de baixo */
+.galeria {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/* Cada foto da galeria. width define o tamanho de cada item da linha. */
+.galeria figure {
+	width: 240px;
+	margin: 0;                            /* o <figure> vem com margem própria: zeramos */
+	background-color: #1e242b;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+/* width: 100% faz a imagem ocupar a largura do figure;
+   height fixo + object-fit: cover deixa todas do mesmo tamanho, sem distorcer. */
+.galeria img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.3s;
+}
+
+.galeria figure:hover img {
+	transform: scale(1.06);               /* leve zoom ao passar o mouse */
+}
+
+.galeria figcaption {
+	font-size: 14px;
+	line-height: 1.5;
+	color: #b7c3ce;
+	padding: 12px 14px;
+	text-align: center;
+}
