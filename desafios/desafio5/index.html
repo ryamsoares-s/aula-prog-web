@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Desafio 5 - Programação Web | IFMT</title>
+	<link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+
+	<!-- ============ 1. BARRA DE NAVEGAÇÃO ============ -->
+	<header class="topo">
+		<nav class="menu">
+
+			<a class="logo" href="#inicio">&lt;prog<span>web</span>&gt;</a>
+
+			<!-- Um menu horizontal é uma lista <ul> com display: flex -->
+			<ul class="menu-links">
+				<li><a href="#inicio">Início</a></li>
+				<li><a href="#conteudo">Conteúdo</a></li>
+				<li><a href="#materiais">Materiais</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+
+		</nav>
+	</header>
+
+	<!-- ============ 2. ÁREA DE DESTAQUE (HERO) ============ -->
+	<section class="destaque" id="inicio">
+		<p class="etiqueta">4º semestre &middot; Sistemas de Informação</p>
+		<h1>Aprenda a construir a web do zero</h1>
+		<p class="subtitulo">
+			HTML para estruturar, CSS para dar forma e a documentação como melhor amiga.
+			Cinco desafios progressivos, um repositório e muito código escrito à mão.
+		</p>
+		<a class="botao" href="#conteudo">Ver o conteúdo</a>
+	</section>
+
+	<!-- ============ 3. SEÇÃO COM 3 CARDS ============ -->
+	<section class="cards" id="conteudo">
+
+		<article class="card">
+			<div class="icone">&#60;/&#62;</div>
+			<h2>Estrutura com HTML</h2>
+			<p>
+				Tags semânticas, listas, links e imagens. Antes de estilizar,
+				o conteúdo precisa fazer sentido sozinho.
+			</p>
+		</article>
+
+		<article class="card">
+			<div class="icone">&#9679;</div>
+			<h2>Estilo com CSS</h2>
+			<p>
+				Cores, tipografia, espaçamento e o box model. As três formas de
+				aplicar CSS e quando usar cada uma.
+			</p>
+		</article>
+
+		<article class="card">
+			<div class="icone">&#9635;</div>
+			<h2>Layout com Flexbox</h2>
+			<p>
+				Menus na horizontal, cards lado a lado e alinhamento sem gambiarra.
+				A base de qualquer página moderna.
+			</p>
+		</article>
+
+	</section>
+
+	<!-- ============ 4. RODAPÉ ============ -->
+	<footer class="rodape" id="contato">
+		<p class="rodape-titulo">Programação Web &mdash; IFMT</p>
+		<p>Prof. Ryam Soares da Silva &middot; Bacharelado em Sistemas de Informação</p>
+		<p class="rodape-links">
+			<a href="#materiais">Materiais</a> &middot;
+			<a href="https://github.com/ryamsoares-s">GitHub da disciplina</a> &middot;
+			<a href="#inicio">Voltar ao topo</a>
+		</p>
+	</footer>
+
+</body>
+</html>

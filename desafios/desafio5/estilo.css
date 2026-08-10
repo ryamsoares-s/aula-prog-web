@@ -1,0 +1,218 @@
+/* ==========================================================
+   Desafio 5 - Mini landing page
+   Foco: Flexbox no menu e nos cards (justify-content, align-items),
+         tags semânticas, botão estilizado e rodapé centralizado
+   ========================================================== */
+
+/* Reset simples: tira as margens que o navegador coloca sozinho */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ffffff;
+	color: #1c2733;
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+	line-height: 1.6;
+	margin: 0;
+}
+
+/* ---------------- 1. BARRA DE NAVEGAÇÃO ---------------- */
+
+.topo {
+	background-color: #101a28;
+	padding: 0 24px;
+	position: sticky;                     /* o menu gruda no topo ao rolar */
+	top: 0;
+}
+
+/* justify-content: space-between joga a logo para a esquerda
+   e os links para a direita, com o espaço vago no meio.
+   align-items: center alinha tudo verticalmente. */
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 12px;
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 16px 0;
+}
+
+.logo {
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	letter-spacing: -0.5px;
+}
+
+.logo span {
+	color: #4d8dff;
+}
+
+/* MENU HORIZONTAL: a <ul> vira flex, e list-style: none tira as bolinhas */
+.menu-links {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-links a {
+	color: #b9c6d4;
+	font-size: 15px;
+	text-decoration: none;
+	padding: 4px 0;
+	border-bottom: 2px solid transparent;
+	transition: color 0.2s, border-color 0.2s;
+}
+
+.menu-links a:hover {
+	color: #ffffff;
+	border-bottom-color: #4d8dff;
+}
+
+/* ---------------- 2. ÁREA DE DESTAQUE ---------------- */
+
+.destaque {
+	background-color: #101a28;
+	background-image: linear-gradient(160deg, #101a28 0%, #1b3358 100%);
+	color: #ffffff;
+	text-align: center;
+	padding: 96px 24px 104px 24px;
+}
+
+.etiqueta {
+	color: #7fb0ff;
+	font-size: 13px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0 0 16px 0;
+}
+
+.destaque h1 {
+	font-size: 44px;
+	line-height: 1.2;
+	max-width: 720px;
+	margin: 0 auto 20px auto;
+}
+
+.subtitulo {
+	color: #c3d2e2;
+	font-size: 18px;
+	max-width: 620px;
+	margin: 0 auto 36px auto;
+}
+
+/* O botão de destaque. É um <a>, então precisa de display: inline-block
+   para aceitar padding em cima e embaixo. */
+.botao {
+	display: inline-block;
+	background-color: #4d8dff;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 14px 34px;
+	border-radius: 8px;
+	transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao:hover {
+	background-color: #2f6fed;
+	transform: translateY(-2px);
+}
+
+/* ---------------- 3. SEÇÃO COM 3 CARDS ---------------- */
+
+/* Os 3 cards lado a lado, também com Flexbox.
+   align-items: stretch (padrão) faz todos ficarem da mesma altura. */
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 24px;
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 72px 24px;
+}
+
+/* flex: 1 faz os três dividirem o espaço em partes iguais.
+   min-width evita que fiquem estreitos demais em telas pequenas. */
+.card {
+	flex: 1;
+	min-width: 260px;
+	background-color: #ffffff;
+	border: 1px solid #e3e8ee;
+	border-radius: 14px;
+	padding: 32px 28px;
+	transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.card:hover {
+	box-shadow: 0 12px 28px rgba(16, 26, 40, 0.12);
+	transform: translateY(-4px);
+}
+
+/* Flexbox de novo, agora só para centralizar o ícone dentro do quadradinho */
+.icone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	background-color: #e8f0ff;
+	color: #2f6fed;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10px;
+	margin-bottom: 18px;
+}
+
+.card h2 {
+	font-size: 20px;
+	margin: 0 0 10px 0;
+}
+
+.card p {
+	color: #5d6b7a;
+	font-size: 15px;
+	margin: 0;
+}
+
+/* ---------------- 4. RODAPÉ ---------------- */
+
+.rodape {
+	background-color: #101a28;
+	color: #93a3b5;
+	font-size: 14px;
+	text-align: center;                   /* rodapé centralizado */
+	padding: 40px 24px;
+}
+
+.rodape p {
+	margin: 0 0 6px 0;
+}
+
+.rodape-titulo {
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.rodape-links {
+	margin-top: 14px;
+}
+
+.rodape-links a {
+	color: #7fb0ff;
+	text-decoration: none;
+}
+
+.rodape-links a:hover {
+	text-decoration: underline;
+}
