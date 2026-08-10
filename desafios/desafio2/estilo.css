@@ -1,0 +1,77 @@
+/* ==========================================================
+   Desafio 2 - Página de receita
+   Foco: cor de fundo, font-size, line-height, margin e padding
+   ========================================================== */
+
+body {
+	background-color: #fdf6ec;          /* cor de fundo da página */
+	color: #3b2f22;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 17px;
+	line-height: 1.7;                   /* espaçamento entre as linhas do texto */
+	margin: 0;
+	padding: 32px 16px;                 /* respiro nas bordas da tela */
+}
+
+/* A "folha" da receita: margin auto centraliza, padding afasta o texto da borda */
+.receita {
+	background-color: #ffffff;
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+	font-size: 34px;
+	line-height: 1.2;
+	margin: 0 0 8px 0;
+	color: #b3541e;
+}
+
+h2 {
+	font-size: 22px;
+	margin: 36px 0 12px 0;
+	padding-bottom: 8px;
+	border-bottom: 2px solid #f0dfc8;   /* uma linha discreta abaixo do título */
+}
+
+.resumo {
+	font-size: 15px;
+	color: #8a7a68;
+	margin: 0 0 24px 0;
+}
+
+.foto-prato {
+	width: 100%;                        /* a imagem acompanha a largura da folha */
+	height: 320px;
+	object-fit: cover;                  /* recorta sem distorcer o prato */
+	border-radius: 8px;
+	display: block;
+}
+
+/* padding-left afasta a lista da margem; li dá espaço entre um item e outro */
+ul,
+ol {
+	padding-left: 26px;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+.dica {
+	background-color: #fff4e0;
+	border-left: 4px solid #e8a33d;
+	font-size: 16px;
+	margin: 32px 0 0 0;
+	padding: 14px 18px;
+}
+
+.credito {
+	font-size: 13px;
+	color: #9a8b79;
+	margin: 28px 0 0 0;
+}
