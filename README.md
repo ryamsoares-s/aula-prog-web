@@ -12,3 +12,4 @@ Repositório das atividades da disciplina.
 - [`atividade/`](atividade/) — atividades avulsas
 - [`desafios/`](desafios/) — lista de 5 desafios de HTML e CSS, um por pasta
 - [`api/`](api/) — consumo de APIs com `fetch` (ex.: busca de CEP no ViaCEP)
+- [`api-ibge/`](api-ibge/) — página com `fetch`: estados e municípios da API do IBGE
