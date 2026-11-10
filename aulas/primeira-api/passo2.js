@@ -18,8 +18,9 @@ app.get("/ddd/:ddd", (request, response) => {
     const encontrado = ddds.find(item => item.ddd === request.params.ddd); 
     if (!encontrado) {
         return response.status(404).json({ erro: "DDD não encontrado" });
+    }else {
+        response.json(encontrado);
     }
-    response.json(encontrado);
 });
 
 app.listen(3000, () => console.log("Servidor rodando em http://localhost:3000"));
