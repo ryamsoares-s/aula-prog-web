@@ -1,0 +1,14 @@
+{
+  "name": "crud-alunos",
+  "version": "1.0.0",
+  "description": "API REST com Express — CRUD de alunos em memória",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
