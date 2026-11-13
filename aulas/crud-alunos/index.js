@@ -15,7 +15,7 @@ app.get("/alunos", (request, response) => {
 
 app.get("/alunos/:id", (request, response) => {
     const id = Number(request.params.id);
-    const aluno = alunos. find(item => item.id === id);
+    const aluno = alunos.find(item => item.id === id);
     if (!aluno) {
         return response.status(404).json({erro: "Aluno não encontrado"});
     }
@@ -29,7 +29,18 @@ app.post("/alunos", (request, response) => {
     response.status(201).json(novoAluno);
 });
 
-app.listen(3000, () => console.log("Servidor rodando em http://localhost:3000"));
+app.delete("/alunos/:id", (request, response) => {
+    const id = Number(request.params.id);
+    const existe = alunos.some(item => item.id === id);
+    if (!existe) {
+        return response.status(404).json({erro: "Aluno não encontrado"});
+    }
+    alunos = alunos.filter(item => item.id !== id);
+    response.status(204).send();
+});
+
+
+app.listen(3001, () => console.log("Servidor rodando em http://localhost:3001"));
 
 
 
